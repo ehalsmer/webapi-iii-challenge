@@ -1,10 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 
 const server = express();
 const usersRouter = require('./users/userRouter');
 const postsRouter = require('./posts/postRouter');
 
-
+server.use(cors())
 
 //custom middleware
 
