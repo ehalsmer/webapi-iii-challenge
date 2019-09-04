@@ -116,6 +116,16 @@ router.delete("/:id", validateUserId, (req, res) => {
 });
 
 // edit a user
-router.put("/:id", (req, res) => {});
+router.put("/:id", validateUserId, validateUser, (req, res) => {
+    const id = req.params.id;
+    const updatedUser = req.body;
+    userDb.update(id, updatedUser)
+    .then(response => {
+        res.status(200).json(req.body);
+    })
+    .catch(error => {
+        res.status(500).json({error: `error updating user with id ${id}`})
+    })
+});
 
 module.exports = router;
