@@ -78,9 +78,13 @@ router.post("/:id/posts", validateUserId, validatePost, (req, res) => {
 
 // returns an array of all users
 router.get("/", (req, res) => {
-  userDb.get().then(response => {
+  userDb.get()
+  .then(response => {
     res.status(200).json(response);
-  });
+  })
+  .catch(() => {
+      res.status(500).json({message: 'error getting users'})
+  })
 });
 
 // gets a single user by id. returns an object with id and name

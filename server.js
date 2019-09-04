@@ -2,6 +2,7 @@ const express = require('express');
 
 const server = express();
 const usersRouter = require('./users/userRouter');
+const postsRouter = require('./posts/postRouter');
 
 
 
@@ -18,5 +19,6 @@ server.get('/', logger, (req, res) => {
 });
 
 server.use('/users', logger, usersRouter)
+server.use('/posts', logger, postsRouter)
 
 module.exports = server;
