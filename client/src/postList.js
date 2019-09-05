@@ -18,6 +18,7 @@ const PostList = () => {
     return(
         <div>
             <h1>All Posts</h1>
+            <h3>Test</h3>
             {posts.map((post) => <div>{post.text}</div>)}
         </div>
     )
