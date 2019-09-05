@@ -1,13 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import UserList from './userList';
+import React from "react";
+import "./App.scss";
+import UserList from "./userList";
+import PostList from "./postList";
+import Home from './home';
+import Nav from "./Nav";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <UserList />
-    </div>
+    <Router>
+      <div className="App">
+        <Route path='/' component={Nav} />
+        <Route path='/home' component={Home} />
+        <Route path="/users/" component={UserList} />
+        <Route path="/allposts/" component={PostList} />
+      </div>
+    </Router>
   );
 }
 
