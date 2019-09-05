@@ -1,5 +1,7 @@
-// code away!
+require('dotenv').config()
 const server = require('./server');
+const defaults = require('./config/default');
 
-const port = 8001
-server.listen(port, () => console.log(`Server is listening on port ${port}`))
+
+// const port = defaults.port
+server.listen(defaults.port, () => console.log(`Server is listening on port ${defaults.port}`))
