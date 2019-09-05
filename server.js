@@ -12,17 +12,6 @@ server.use(cors());
 // static file declaration
 server.use(express.static(path.join(__dirname, "client/build")));
 
-// if (process.env.NODE_ENV === "production") {
-//   server.use(express.static(path.join(__dirname, "client/build")));
-//   server.get("/", (req, res) => {
-//     res.sendfile(path.join((__dirname = "client/build/index.html")));
-//   });
-// }
-
-// server.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname + "/client/public/index.html"));
-// });
-
 //custom middleware
 
 // logger should be applied to all requests

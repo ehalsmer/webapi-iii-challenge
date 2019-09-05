@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react';
 
 const Nav = () => {
     return (
-        <span className='nav-span'>
-            <Link to='/'>Home</Link>
-            <Link to='/allposts/'>All Posts</Link>
-            <Link to='/users/'>Users</Link>
-        </span>
+        <Menu>
+            <Menu.Item as={Link} to={'/'}>Home</Menu.Item>
+            <Menu.Item as={Link} to={'/allposts'}>All Posts</Menu.Item>
+            <Menu.Item as={Link} to={'/users'}>Users</Menu.Item>
+        </Menu>
     )
 }
 
