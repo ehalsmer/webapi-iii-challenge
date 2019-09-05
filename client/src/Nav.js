@@ -29,7 +29,7 @@ const Nav = () => {
       {/* <Menu.Item>Users</Menu.Item> */}
       <Dropdown item text="Users">
         <Dropdown.Menu>
-            {users.map((user)=><Menu.Item>{user.name}</Menu.Item>)}
+            {users.map((user)=><Menu.Item as={Link} to={`/user/${user.id}`}>{user.name}</Menu.Item>)}
         </Dropdown.Menu>
       </Dropdown>
     </Menu>
