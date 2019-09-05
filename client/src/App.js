@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="App">
         <Route path='/' component={Nav} />
-        <Route path='/home' component={Home} />
+        <Route exact path='/' component={Home} />
         <Route path="/users/" component={UserList} />
         <Route path="/allposts/" component={PostList} />
       </div>

@@ -5,7 +5,7 @@ const UserList = () => {
     const [users, setUsers] = useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:8001/users')
+        axios.get('https://ehalsmer-blog.herokuapp.com/users')
         .then(response => {
             console.log(response)
             setUsers(response.data)

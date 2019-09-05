@@ -5,7 +5,7 @@ const PostList = () => {
     const [posts, setPosts] = useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:8001/posts')
+        axios.get('https://ehalsmer-blog.herokuapp.com/posts')
         .then(response => {
             console.log(response)
             setPosts(response.data)
